@@ -1,3 +1,4 @@
+[![Build Status](https://dev.azure.com/ACC-Azure-06/30530-ICAP-SDP/_apis/build/status/jingxuezhou.azure-pipeline?branchName=dependabot%2Fmaven%2Fjunit-junit-4.13.1)](https://dev.azure.com/ACC-Azure-06/30530-ICAP-SDP/_build/latest?definitionId=7615&branchName=dependabot%2Fmaven%2Fjunit-junit-4.13.1)
 
 # Contributing
 
