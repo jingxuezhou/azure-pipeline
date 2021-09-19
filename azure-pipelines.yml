@@ -6,8 +6,18 @@
 trigger:
 - dependabot/maven/junit-junit-4.13.1
 
+strategy:
+  matrix:
+    linux:
+      imageName: "ubuntu-latest"
+    mac:
+      imageName: "macOS-latest"
+    windows:
+      imageName: "windows-latest"
+  maxParallel: 3
+
 pool:
-  vmImage: ubuntu-latest
+  vmImage: $(imageName)
 
 steps:
 - task: Maven@3
