@@ -12,6 +12,14 @@ parameters:
   - 4
   - 8
   - 16
+- name: image
+  displayName: Pool Image
+  type: string
+  default: ubuntu-latest
+  values:
+  - windows-latest
+  - ubuntu-latest
+  - macOS-latest
   
 trigger: none
 
@@ -33,7 +41,7 @@ stages:
   - job: UnitTest
     steps:
     - script: echo running UnitTest
-    - script: echo  my number: ${{ parameters.myNumber }}
+    - script: echo  my image: ${{ parameters.image }}
 
 
 - ${{ if eq(parameters.runPerfTests, true) }}:
