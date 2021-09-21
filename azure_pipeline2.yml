@@ -1,6 +1,6 @@
 
 variables:
-- name:global_variable
+- name: global_variable
   value: value    # this is available to all jobs
 - name: one
   value: initialValue 
