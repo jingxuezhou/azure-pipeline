@@ -3,7 +3,16 @@ parameters:
 - name: runPerfTests
   type: boolean
   default: false
-
+- name: myNumber
+  type: number
+  default: 2
+  values:
+  - 1
+  - 2
+  - 4
+  - 8
+  - 16
+  
 trigger: none
 
 pool: 30530-ICAP-SDP-DevOps-AgentPool
@@ -24,6 +33,7 @@ stages:
   - job: UnitTest
     steps:
     - script: echo running UnitTest
+    - script: echo  my number: {{parameters.myNumber}}
 
 
 - ${{ if eq(parameters.runPerfTests, true) }}:
