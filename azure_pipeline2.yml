@@ -8,8 +8,10 @@ variables:
   
 pool: 30530-ICAP-SDP-DevOps-AgentPool
 
+jobs: 
 
-steps:
+-job: job0
+ steps:
   - script: |
       echo ${{ variables.one }} # outputs initialValue
       echo $(one)
@@ -21,7 +23,6 @@ steps:
       echo $(one) # outputs secondValue
     displayName: Second variable pass
 
-jobs:
 - job: job1
   variables:
     job_variable1: value1    # this is only available in job1
