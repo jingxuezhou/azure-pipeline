@@ -1,0 +1,5 @@
+# azure-pipeline.yaml
+trigger: none
+
+extends:
+  template: start.yaml
