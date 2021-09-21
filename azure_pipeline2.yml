@@ -1,6 +1,8 @@
 variables:
 - name: one
   value: initialValue 
+  
+pool: 30530-ICAP-SDP-DevOps-AgentPool
 
 steps:
   - script: |
