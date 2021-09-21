@@ -3,3 +3,4 @@ trigger: none
 pool: 30530-ICAP-SDP-DevOps-AgentPool
 extends:
   template: start.yaml
+  template: template.yml
