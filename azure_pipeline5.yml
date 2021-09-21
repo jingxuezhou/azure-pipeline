@@ -33,7 +33,7 @@ stages:
   - job: UnitTest
     steps:
     - script: echo running UnitTest
-    - script: echo  my number: {{ parameters.myNumber }}
+    - script: echo  my number: ${{ parameters.myNumber }}
 
 
 - ${{ if eq(parameters.runPerfTests, true) }}:
