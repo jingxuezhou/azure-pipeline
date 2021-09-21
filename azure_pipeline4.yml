@@ -1,8 +1,7 @@
 
 
 # File: azure-pipelines.yml
-trigger:
- none
+trigger: none
 
 pool: 30530-ICAP-SDP-DevOps-AgentPool
 
