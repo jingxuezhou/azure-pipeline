@@ -1,10 +1,13 @@
 
 variables:
+- name:global_variable
+  value: value    # this is available to all jobs
 - name: one
   value: initialValue 
-  global_variable: value    # this is available to all jobs
+
   
 pool: 30530-ICAP-SDP-DevOps-AgentPool
+
 
 steps:
   - script: |
@@ -20,8 +23,6 @@ steps:
 
 jobs:
 - job: job1
-  pool:
-    vmImage: 'ubuntu-latest'
   variables:
     job_variable1: value1    # this is only available in job1
   steps:
@@ -30,8 +31,6 @@ jobs:
   - bash: echo $JOB_VARIABLE1 # variables are available in the script environment too
 
 - job: job2
-  pool:
-    vmImage: 'ubuntu-latest'
   variables:
     job_variable2: value2    # this is only available in job2
   steps:
