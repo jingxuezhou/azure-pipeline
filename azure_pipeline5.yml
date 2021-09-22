@@ -32,9 +32,9 @@ stages:
   - job: UnitTest
     steps:
     - script: echo running UnitTest 
-    displayName: this is Unit Test
-    - script: echo "my image- ${{parameters.image}} "
-    displayName: this is image
+      displayName: this is Unit Test
+    - script: echo  ${{parameters.image}} 
+      displayName: this is image
 
 
 - ${{ if eq(parameters.runPerfTests, true) }}:
