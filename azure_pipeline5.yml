@@ -11,6 +11,15 @@ parameters:
   - windows-latest
   - ubuntu-latest
   - macOS-latest
+- name: myNumber
+  type: number
+  default: 2
+  values:
+  - 1
+  - 2
+  - 4
+  - 8
+  - 16
   
 trigger: none
 
@@ -35,7 +44,8 @@ stages:
       displayName: this is Unit Test
     - script: echo  ${{parameters.image}} 
       displayName: this is image
-
+    - script: echo  ${{ parameters.myNumber }} 
+      displayName: this is my number
 
 - ${{ if eq(parameters.runPerfTests, true) }}:
   - stage: PerfTest
