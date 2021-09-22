@@ -3,15 +3,6 @@ parameters:
 - name: runPerfTests
   type: boolean
   default: false
-- name: myNumber
-  type: number
-  default: 2
-  values:
-  - 1
-  - 2
-  - 4
-  - 8
-  - 16
 - name: image
   displayName: Pool Image
   type: string
