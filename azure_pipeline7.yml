@@ -3,7 +3,7 @@ trigger:
 
 pool: 30530-ICAP-SDP-DevOps-AgentPool
 
-
+steps: 
 - task: AzureCLI@2
   displayName: Azure CLI
   inputs:
