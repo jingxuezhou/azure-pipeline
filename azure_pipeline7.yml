@@ -7,7 +7,7 @@ steps:
 - task: AzureCLI@2
   displayName: Azure CLI
   inputs:
-    azureSubscription: 30530-ICAP-SDP-NPRD-SC
+    azureSubscription: 30530-ICAP-SDP-NPRD-ServiceConnection
     scriptType: bash
     scriptLocation: inlineScript
     inlineScript: |
