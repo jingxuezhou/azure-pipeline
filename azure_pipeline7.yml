@@ -8,7 +8,7 @@ steps:
   displayName: Azure CLI
   inputs:
     azureSubscription: 30530-ICAP-SDP-NPRD-ServiceConnection
-    scriptType: ps core
+    scriptType: pscore
     scriptLocation: inlineScript
     inlineScript: |
       az --version
