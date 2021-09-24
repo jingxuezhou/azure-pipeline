@@ -7,7 +7,7 @@ steps:
 - task: AzureCLI@2
   displayName: Azure CLI
   inputs:
-    azureSubscription: <Name of the Azure Resource Manager service connection>
+    azureSubscription: 3377047f-02a8-4316-91eb-99afd67a0352
     scriptType: ps
     scriptLocation: inlineScript
     inlineScript: |
