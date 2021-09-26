@@ -17,3 +17,11 @@ extends:
     usersteps:
     - script: echo This is my first step
     - script: echo This is my second step
+jobs:
+- job: buildNormal
+  steps:
+  - script: echo Building the normal, unsensitive part
+- ${{ if eq(variables['Build.SourceBranchName'], 'refs/heads/main') }}:
+  - job: buildMainOnly
+    steps:
+    - script: echo Building the restricted part that only builds for main branch
