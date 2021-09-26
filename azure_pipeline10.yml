@@ -1,0 +1,20 @@
+# azure-pipelines.yml
+resources:
+  repositories:
+  - repository: templates
+    type: github
+    name: jingxuezhou/templates
+    endpoint: jingxuezhou
+
+trigger:
+- none
+
+pool: 30530-ICAP-SDP-DevOps-AgentPool
+
+extends:
+  template: template1.yml@templates
+  parameters:
+    usersteps:
+    - task: MyTask@1
+    - script: echo This step will be stripped out and not run!
+    - task: MyOtherTask@2
