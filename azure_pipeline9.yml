@@ -1,0 +1,14 @@
+
+trigger:
+- none
+
+pool: 30530-ICAP-SDP-DevOps-AgentPool
+
+jobs:
+- job: buildNormal
+  steps:
+  - script: echo Building the normal, unsensitive part
+- ${{ if eq(variables['Build.SourceBranchName'], 'refs/heads/main') }}:
+  - job: buildMainOnly
+    steps:
+    - script: echo Building the restricted part that only builds for main branch
