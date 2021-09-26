@@ -1,0 +1,13 @@
+# azure-pipeline.yml
+parameters:
+- name: doThing
+  default: true # will not be evaluated in time
+  type: boolean
+
+trigger:
+- none
+
+pool: 30530-ICAP-SDP-DevOps-AgentPool
+
+extends:
+  template: parameters.yml
