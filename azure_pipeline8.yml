@@ -1,4 +1,4 @@
-p# azure-pipelines.yml
+# azure-pipelines.yml
 resources:
   repositories:
   - repository: templates
