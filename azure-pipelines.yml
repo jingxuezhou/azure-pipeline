@@ -18,8 +18,6 @@ strategy:
       jdk_version: "1.10"
   maxParallel: 2
 
-pool:
-  vmImage: $(imageName)
   
 steps:
 - task: Maven@3
