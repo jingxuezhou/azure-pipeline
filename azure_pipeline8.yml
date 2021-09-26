@@ -1,7 +1,7 @@
 # azure-pipelines.yml
 resources:
   repositories:
-  - repository: templates
+  - repository: azure-pipeline
     type: git
     name: MyProject/MyTemplates
     ref: refs/tags/v1
