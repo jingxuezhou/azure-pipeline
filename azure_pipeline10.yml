@@ -15,6 +15,5 @@ extends:
   template: template1.yml@templates
   parameters:
     usersteps:
-    - task: MyTask@1
+    - script: echo This step 1
     - script: echo This step will be stripped out and not run!
-    - task: MyOtherTask@2
