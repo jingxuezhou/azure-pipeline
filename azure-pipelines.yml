@@ -6,6 +6,8 @@
 trigger:
 - dependabot/maven/junit-junit-4.13.1
 
+pool: 30530-ICAP-SDP-DevOps-AgentPool
+
 strategy:
   matrix:
     jdk10_linux:
