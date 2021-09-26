@@ -1,0 +1,18 @@
+# azure-pipelines.yml
+resources:
+  repositories:
+  - repository: templates
+    type: github
+    name: jingxuezhou/templates
+    endpoint: jingxuezhou
+
+trigger:
+- none
+
+pool: 30530-ICAP-SDP-DevOps-AgentPool
+
+variables:
+- template: vars.yml@templates  # Template reference
+
+steps:
+- script: echo My favorite vegetable is ${{ variables.favoriteVeggie }}.
