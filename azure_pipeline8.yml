@@ -6,6 +6,11 @@ resources:
     name: jingxuezhou/templates
     endpoint: jingxuezhou
 
+trigger:
+- none
+
+pool: 30530-ICAP-SDP-DevOps-AgentPool
+
 extends:
   template: template.yml@templates
   parameters:
