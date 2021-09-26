@@ -1,0 +1,11 @@
+# parameters.yml
+parameters:
+- name: doThing
+  default: false # value passed to the condition
+  type: boolean
+
+jobs:
+  - job: B
+    steps:
+    - script: echo I did a thing
+    condition: and(succeeded(), eq('${{ parameters.doThing }}', 'true'))
